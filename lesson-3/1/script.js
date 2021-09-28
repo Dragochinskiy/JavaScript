@@ -1,13 +1,11 @@
 'use strict'
 
 for (let i = 0; i <= 10; i++) {
-    if (i == 0) { // Почему если здесь написать i = 0 то браузер виснет?
+    if (i == 0) {
         console.log(i + '- это ноль');
-    }
-    else if (i % 2 == 0) {
+    } else if (i % 2 == 0) {
         console.log(i + '- четное число');
-    }
-    else {
+    } else {
         console.log(i + '- нечетное число');
     }
 }
