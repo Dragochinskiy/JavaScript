@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        function Product(name, price) {
+            this.name = name;
+            this.price = price;
+        }
+
+        Product.prototype.make25PercentDiscount = function () {
+            this.price = this.price - (this.price * 25 / 100);
+        };
+
+        const product1 = new Product('Товар 1', 230);
+        product1.make25PercentDiscount();
+
+        console.log(product1);
+
+        // Прочитал несколько раз задание. Ничего не понял и взял готовое решение.
+        // Не получается ориентироваться по this. Не понимаю какой this к чему относится.
+    </script>
+</body>
+
+</html>
