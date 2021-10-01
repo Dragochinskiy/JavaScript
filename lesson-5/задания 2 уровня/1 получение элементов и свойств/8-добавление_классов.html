@@ -21,9 +21,11 @@
     <script>
         let tagB = document.querySelectorAll('b')
         let Sign = 'sign'
-        if (tagB.classList.contains('sign') !== Sign) {
-            tagB.classList.add('sign')
-        }
+        tagB.forEach(function (params) {
+            if (params.classList.contains('sign') !== Sign) {
+                params.classList.add('sign')
+            }
+        });
         console.log(tagB)
 
         // Вроде все верно, но вылезает ошибка. По информации из ошибки в интернете ничего найти не получилось!

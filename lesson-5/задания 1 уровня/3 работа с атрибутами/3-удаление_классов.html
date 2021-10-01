@@ -26,11 +26,9 @@
 
 <script>
     // let searchClass = document.getElementsByClassName('dropdown-menu')
-    let searchClass = document.querySelector('.dropdown-menu')
+    let searchClass = document.getElementsByClassName('dropdown-menu')[0].classList.remove('dropdown-menu')
     searchClass.classList.remove('dropdown-menu')
     console.log(searchClass)
-
-    // Почему при использовании getElementsByClassName удаление не происходит?
 </script>
 
 </html>

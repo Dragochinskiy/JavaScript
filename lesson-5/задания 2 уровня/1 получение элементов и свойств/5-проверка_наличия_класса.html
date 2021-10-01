@@ -17,7 +17,7 @@
 <script>
     let searchDiv = document.querySelector('div')
     let contains = searchDiv.classList.contains('hidden');
-    if (contains === true) { // Не уверен, что выражение верное
+    if (searchDiv.classList.contains('hidden')) {
         console.log('Класс hidden у тега div есть')
     } else {
         console.log('Класса hidden у тега div нет')
