@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="modal fade" 
+         id="exampleModal" 
+         tabindex="-1" 
+         aria-labelledby="exampleModalLabel" 
+         aria-hidden="true">
+		текст
+    </div>
+
+    <!-- 
+    Задание.
+    1. Сохраните ссылку на div в переменную
+    2. Назначьте div'у обработку клика, у функции-обработчика объявите параметр event.
+    3. При клике из event.target c помощью getAttribute() получите значение
+    каждого атрибута и выведите в консоль.
+    -->
+</body>
+<script>
+    let searchDiv = document.querySelector('div'); // Сохраняю в переменную найденный div
+    let attrs = searchDiv.attributes; // Сохраняю в переменную все атриуты
+    searchDiv.addEventListener('click', (event) => { // Вешаю слушатель клика
+        for (let i = 0; i < attrs.length; i++) {
+            console.log(`Значение атрибута ${attrs[i].name} = ${attrs[i].value}`);
+        }
+    })
+    // Было капец как сложно, но интересно. Уже плюнул, закрыл, но решил вернуться. В общей сложности потратил примерно минут 40.
+    // В готовом варианте вижу, что ничего сложного - все просто и понятно, но вот написать самостоятельно ...
+</script>
+</html>
