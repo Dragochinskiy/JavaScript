@@ -21,11 +21,9 @@
     <script>
         let searchSpan = document.querySelector('span');
         let fromEl = document.querySelector('input');
-        fromEl.addEventListener('click', (event) => {
-            console.log(event.target.value)
+        fromEl.addEventListener('change', (event) => {
+            searchSpan.textContent = event.target.value;
         });
-        
-        // Что-то не пошло ...
     </script>
 </body>
 </html>

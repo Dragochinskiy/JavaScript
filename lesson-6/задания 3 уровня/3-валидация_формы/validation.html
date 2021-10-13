@@ -40,12 +40,11 @@
         let first = document.getElementById('first');
         let second = document.getElementById('second');
         formEl.addEventListener('submit', (event) => {
-            if (first || second == '') {
-                console.log(No);
+            if (first.value === "" || second.value === '') {
+                first.style.borderColor = 'red' $$ first.style.borderColor = 'red';
+                event.preventDefault();
             }
         })
-
-        // Что-то через отладчик нет ошибок.
     </script>
 </body>
 </html>

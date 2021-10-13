@@ -17,13 +17,10 @@
     padding. -->
 
     <script>
-        let searchDiv = document.querySelectorAll('div');
-        searchDiv.forEach(function (div) {
-            div.style.padding = '10px';
-        });
-        searchDiv.forEach(element => element.style.padding = '10px');
-
-        // Не понимаю как сделать через getElementsByTagName. Нашел решение через querySelectorAll.
+        let searchDiv = document.getElementsByTagName('div');
+        for (let i = 0; i < searchDiv.length; i++) {
+            searchDiv[i].style.fontSize = '25px';
+        }
     </script>
 </body>
 </html>
