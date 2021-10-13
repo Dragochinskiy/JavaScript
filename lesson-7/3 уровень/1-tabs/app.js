@@ -13,6 +13,7 @@ const texts = {
 */
 
 let searchText = document.querySelector('.text');
+
 let navLink = document.querySelectorAll('.nav-link');
 navLink.forEach(function (params) {
     params.addEventListener('click', () => { clickHandler() });
@@ -35,7 +36,8 @@ function clickHandler(event) {
  * @param {MouseEvent} event 
  */
 function changeActiveClass(event) { // С самого начала event имеет андефайнт
-    event.classList.remove('active');
+    document.querySelector('.active').classList.remove('active');
+    event.target.classList.add('active');
 }
 
 /**
@@ -45,5 +47,15 @@ function changeActiveClass(event) { // С самого начала event име
  * @param {MouseEvent} event 
  */
 function changeText(event) {
-
+    switch (event.target.textContent) {
+        case "Link 1":
+            textEl.textContent = texts.text1;
+            break;
+        case "Link 2":
+            textEl.textContent = texts.text2;
+            break;
+        case "Link 3":
+            textEl.textContent = texts.text3;
+            break;
+    }
 }

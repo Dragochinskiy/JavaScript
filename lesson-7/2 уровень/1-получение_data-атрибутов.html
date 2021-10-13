@@ -20,10 +20,11 @@
     -->
 
     <script>
-        let searchButton = document.querySelectorAll('button');
-        searchButton.addEventListener('click', () => {
-            console.log();
-        });
+        let searchButtons = document.querySelectorAll('button');
+            searchButtons.forEach(el => el.addEventListener('click', event => {
+                console.log(event.target.dataset.id, event.target.dataset.value);
+            }
+        ));
 
         searchButton.forEach(function (params) {
             console.log(params.dataset.id + params.dataset.value);
